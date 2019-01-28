@@ -30,12 +30,14 @@ objects:
       name: 'golang-health-check${SUFFIX_NAME}'
       labels:
         version: '${RELEASE_VERSION}'
+        app: golang-health-check
     spec: {}
   - apiVersion: v1
     kind: BuildConfig
     metadata:
       name: 'golang-health-check-s2i${SUFFIX_NAME}'
       labels:
+        app: golang-health-check
         version: '${RELEASE_VERSION}'
     spec:
       output:
@@ -72,6 +74,7 @@ objects:
     metadata:
       name: 'golang-health-check${SUFFIX_NAME}'
       labels:
+        app: golang-health-check
         provider: golang-starters
         expose: 'true'
         project: golang-health-check
@@ -142,6 +145,7 @@ objects:
     kind: Route
     metadata:
       labels:
+        app: golang-health-check
         project: golang-health-check
         provider: golang-starters
         version: '${RELEASE_VERSION}'
