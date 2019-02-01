@@ -56,7 +56,7 @@ objects:
         sourceStrategy:
           from:
             kind: DockerImage
-            name: 'centos/go-toolset-7-centos7'
+            name: 'registry.fedoraproject.org/f29/golang'
           incremental: true
     status:
       lastVersion: 0
