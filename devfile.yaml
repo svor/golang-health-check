@@ -8,9 +8,6 @@ components:
       memoryLimit: 2Gi
       mountSources: true
       env:
-        - name: GOPATH
-          # replicate the GOPATH from the plugin
-          value: /projects/.che/gopath:/projects
         - name: GOCACHE
           # replicate the GOCACHE from the plugin, even though the cache is not shared
           # between the two
